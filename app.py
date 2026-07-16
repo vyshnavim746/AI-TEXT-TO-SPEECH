@@ -5,7 +5,8 @@ from elevenlabs.client import ElevenLabs
 
 load_dotenv()
 
-api_key = os.getenv("ELEVENLABS_API_KEY")
+
+api_key = st.secrets.get("ELEVENLABS_API_KEY") or os.getenv("ELEVENLABS_API_KEY")
 
 st.set_page_config(page_title="ElevenLabs Text to Speech", page_icon="🔊")
 
