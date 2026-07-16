@@ -35,6 +35,7 @@ if st.button("Generate Speech"):
             text=text
         )  
 
+        os.makedirs("output", exist_ok=True)
         out_path = "output/output.mp3"
         with open(out_path, "wb") as f:  
             for chunk in audio:
